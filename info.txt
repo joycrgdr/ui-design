@@ -1,0 +1,40 @@
+"C:\Program Files\nodejs\node.exe"
+
+print("Content-type: text/html \n") 
+
+import cgi
+import cgitb
+
+file=open("info.txt","w")
+form=cgi.FieldStorage()
+fname=form.getvalue("Fname")
+lname=form.getvalue("Lname")
+uname= form.getvalue("Uname")
+male=form.getvalue("gender")
+female=form.getvalue("gender")
+month=form.getvalue("month")
+date=form.getvalue("date")
+year=form.getvalue("year")
+newline="\n"
+
+file.write("Name: ")
+file.write(str(fname))
+file.write(str(lname))
+file.write(str(newline))
+file.write("Username: ")
+file.write(str(uname))
+file.write(newline)
+file.write("Date of Birth: ")
+file.write(str(dob))
+
+
+if male:
+   inputfile.write("Gender: ")
+   inputfile.write(str(male))
+   inputfile.write(newline)
+elif female:
+    inputfile.write("Gender: ")
+    inputfile.write(str(female))
+    inputfile.write(newline)
+
+file=close()
